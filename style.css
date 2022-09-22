@@ -103,7 +103,7 @@ cursor: pointer;
 } 
 
 input[type="radio"],
-input[type="checkobx"] {
+input[type="checkbox"] {
   display: none;
 }
 
