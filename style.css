@@ -188,3 +188,39 @@ input:checked ~ .bubble::after {
   margin-right: 1rem;
   cursor: pointer;
 }
+
+.todo-item .todo-content {
+  flex: 1 1 0%;
+
+}
+.todo-item .todo-content input {
+  color: var(--dark);
+  font-size: 1.125rem;
+}
+.todo-item .actions {
+  display: flex;
+  align-items: center;
+}
+.todo-item .actions button {
+  display: block;
+  padding: 0.5rem;
+  color: #fff ;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition:  0.2 s ease-in-out;
+}
+.todo-item .actions .edit {
+  margin-right: 0.5rem;
+  background-color: var(--primary);
+}
+.todo-item .actions .delete {
+  background-color: var(--danger);
+}
+.todo-item .actions button:hover {
+  opacity: 0.75;
+}
+
+.todo-item.done .todo-content input {
+  text-decoration: line-through;
+  color: var(--grey);
+}
