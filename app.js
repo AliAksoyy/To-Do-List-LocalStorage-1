@@ -45,10 +45,10 @@ function displayTodos() {
         const label = document.createElement("label")
         const input = document.createElement("input")
         const span = document.createElement("span")
-        const content = document.createElement("content")
-        const actions = document.createElement("actions")
-        const edit = document.createElement("edit")
-        const deleteButton = document.createElement("delete")
+        const content = document.createElement("div")
+        const actions = document.createElement("div")
+        const edit = document.createElement("button")
+        const deleteButton = document.createElement("button")
 
         input.type = "checkbox"
         input.checked = todo.done
@@ -60,7 +60,7 @@ function displayTodos() {
             span.classList.add("business")
         }
         content.classList.add("todo-content")
-        actions.classList.add("todo-actions")
+        actions.classList.add("actions")
         edit.classList.add("edit")
         deleteButton.classList.add("delete")
 
