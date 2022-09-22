@@ -31,27 +31,37 @@ window.addEventListener("load", ()=> {
 
          displayTodos()
     })
-  
+   displayTodos();
 })
 
 function displayTodos() {
     const todoList = document.querySelector("#todo-list")
 
+    todoList.innerHTML= ``
     
-    let content = document.querySelector("#content").value
-    console.log(content)
+    todos.forEach((todo) => {
+        const todoItem = document.createElement("div")
+        todoItem.classList.add("todo-item")
+        const label = document.querySelector("label")
+        const input = doc.querySelector("input")
+        const span = doc.querySelector("span")
+        const content = document.querySelector("content")
+        const actions = document.querySelector("actions")
+        const edit = document.querySelector("edit")
+        const deleteButton = document.querySelector("delete")
 
-    todoList.innerHTML = ` <div class="todo-item done">
-          <label >
-            <input type="checkbox">
-            <span class="bubble business "></span>
-          </label>
-          <div class="todo-content">
-            <input type="text" value="${content}" readonly>
-          </div>`;
-    newTodoForm("submit");
+        input.type = "checkbox"
+        input.checked = todo.done
+        span.classList.add("bubble")
 
-
+        if(todo.category =="personal") {
+            span.classList.add("personal")
+        }else {
+            span.classList.add("business")
+        }
+        content.classList.add("todo-content")
+        actions.classList.add("todo-actions")
+    });
 
 }
 
