@@ -26,8 +26,32 @@ window.addEventListener("load", ()=> {
 
          localStorage.setItem("todos", JSON.stringify(todos));
 
-         console.log(e.target.reset());
+         
+         e.target.reset()
+
+         displayTodos()
     })
   
 })
+
+function displayTodos() {
+    const todoList = document.querySelector("#todo-list")
+
+    
+    let content = document.querySelector("#content").value
+    console.log(content)
+
+    todoList.innerHTML = ` <div class="todo-item done">
+          <label >
+            <input type="checkbox">
+            <span class="bubble business "></span>
+          </label>
+          <div class="todo-content">
+            <input type="text" value="${content}" readonly>
+          </div>`;
+    newTodoForm("submit");
+
+
+
+}
 
